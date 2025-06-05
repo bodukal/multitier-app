@@ -1,0 +1,21 @@
+# Terraform
+*.tfstate
+*.tfstate.backup
+.terraform/
+.terraform.lock.hcl
+
+# Node modules (if using Node.js)
+node_modules/
+
+# Helm and K8s artifacts
+charts/
+*.tgz
+
+# IDE / OS files
+.DS_Store
+*.log
+
+# Sensitive or temp files
+.env
+*.pem
+
