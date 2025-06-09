@@ -1,0 +1,16 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: appback-metrics
+  labels:
+    app: appback
+    release: monitoring  # MUST match your Prometheus release
+spec:
+  selector:
+    matchLabels:
+      app: appback
+  endpoints:
+    - port: metrics
+      interval: 30s
+      path: /metrics
+

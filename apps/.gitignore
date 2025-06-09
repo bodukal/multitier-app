@@ -1,0 +1,28 @@
+# Backend exclusions
+backend/out/
+backend/*.class
+backend/jmx_prometheus_javaagent-0.20.0.jar # The JAR should be handled by Docker, not Git
+
+# Frontend exclusions (adjust based on your frontend framework/build system)
+frontend/node_modules/
+frontend/build/   # For React/Vite builds
+frontend/dist/    # For Angular/Vue builds
+frontend/tmp/
+frontend/coverage/
+frontend/*.log
+frontend/.cache/
+frontend/.angular/ # Example for Angular
+
+# Common IDE files
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+
+# Operating System files
+.DS_Store
+Thumbs.db
+
+# Any other general build outputs or large files you don't want in Git
+target/ # Common for Java Maven/Gradle at project root

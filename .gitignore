@@ -1,21 +1,25 @@
-# Terraform
-*.tfstate
-*.tfstate.backup
-.terraform/
-.terraform.lock.hcl
+# === General Node.js (Frontend) ===
+apps/frontend/node_modules/
+apps/frontend/build/
+apps/frontend/.env
+apps/frontend/package-lock.json
 
-# Node modules (if using Node.js)
-node_modules/
+# === Java build and binaries (Backend) ===
+apps/backend/out/
+apps/backend/*.class
+apps/backend/*.log
+apps/backend/*.jar
+apps/backend/jmx_prometheus_javaagent-*.jar
 
-# Helm and K8s artifacts
-charts/
-*.tgz
-
-# IDE / OS files
+# === IDEs and OS-generated files ===
 .DS_Store
-*.log
+.vscode/
+.idea/
 
-# Sensitive or temp files
-.env
-*.pem
+# === Helm/Terraform state or charts ===
+*.tgz
+*.lock
+*.tfstate
+*.tfstate.*
+.terraform/
 

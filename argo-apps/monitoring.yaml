@@ -1,0 +1,13 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: monitoring
+spec:
+  source:
+    repoURL: 'https://github.com/bodukal/multitier-app.git'
+    path: monitoring
+    targetRevision: HEAD
+    helm:
+      valueFiles:
+        - values.yaml
+

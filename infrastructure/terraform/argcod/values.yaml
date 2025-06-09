@@ -1,14 +1,12 @@
 server:
   service:
-    type: LoadBalancer
+    type: ClusterIP          # No LoadBalancer; internal service
   ingress:
-    enabled: false
-
-configs:
-  params:
-    server.insecure: true
-
-admin:
-  password: ""
-  passwordMtime: ""
+    enabled: true            # Enable ingress for ArgoCD
+    hosts:
+      - argocd.example.com   # Replace with your domain or host you want to use
+    tls:
+      - hosts:
+          - argocd.example.com
+        secretName: argocd-tls-cert  # Optional TLS secret if you want HTTPS
 
